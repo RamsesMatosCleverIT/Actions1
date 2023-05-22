@@ -1,6 +1,6 @@
 name: Instalar dependencias de Node.js
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       language:
         description: 'Lenguaje node'

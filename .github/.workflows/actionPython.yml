@@ -1,6 +1,6 @@
 name: Python Dependencies
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       language:
         description: 'Lenguaje pythinn'

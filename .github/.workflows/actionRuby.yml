@@ -1,6 +1,6 @@
 name: Ruby Dependencies
 on:
-  workflow_dispatch:
+  workflow_call:
     inputs:
       language:
         description: 'lenguaje ruby'
