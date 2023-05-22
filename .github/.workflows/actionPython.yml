@@ -1,0 +1,14 @@
+name: Python Dependencies
+on:
+  workflow_dispatch:
+    inputs:
+      language:
+        description: 'Lenguaje pythinn'
+        required: true
+        default: 'python'
+jobs:
+  instalar-dependencias:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install dependencies
+      run: pip install -r requirements.txt

@@ -1,0 +1,14 @@
+name: PHP Dependencies
+on:
+  workflow_dispatch:
+    inputs:
+      language:
+        description: 'Lenguaje php'
+        required: true
+        default: 'php'
+jobs:
+  instalar-dependencias:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: composer install

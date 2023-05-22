@@ -1,0 +1,14 @@
+name: Instalar dependencias de Node.js
+on:
+  workflow_dispatch:
+    inputs:
+      language:
+        description: 'Lenguaje node'
+        required: true
+        default: 'node'
+jobs:
+  instalar-dependencias:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install dependencies
+      run: npm install

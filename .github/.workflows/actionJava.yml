@@ -1,0 +1,16 @@
+name: Instalar Dependencias de Java
+on:
+  workflow_dispatch:
+    inputs:
+      language:
+        description: 'Lenguaje java'
+        required: true
+        default: 'java'
+jobs:
+  instalar-dependencias:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install Node.js
+      run: |
+        curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+        sudo apt-get install -y nodejs
