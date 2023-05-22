@@ -1,0 +1,14 @@
+name: Ruby Dependencies
+on:
+  workflow_dispatch:
+    inputs:
+      language:
+        description: 'lenguaje ruby'
+        required: true
+        default: 'ruby'
+jobs:
+  install-dependencies:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Dependencias
+      run: gem install bundler && bundle install
